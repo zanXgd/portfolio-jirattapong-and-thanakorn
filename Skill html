@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Skills</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- General Setup --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Kanit', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
 
+        h1 {
+            margin-top: 50px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        /* --- Layout Container --- */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        /* --- Individual Profile Sections --- */
+        .skill-card {
+            background: white;
+            width: 450px; /* Width of each person's section */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .skill-card h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .skill-card h2 span {
+            display: block;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+
+        /* --- The Skill Bars --- */
+        .skill-box {
+            margin-bottom: 20px;
+        }
+
+        .skill-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            /* Gradient for a modern look */
+            background: linear-gradient(90deg, #3498db, #2980b9); 
+            width: 0%; /* Start at 0 for animation */
+            animation: slideIn 1.5s ease-out forwards;
+        }
+
+        /* Custom colors for the second person (optional) */
+        .alt-color .progress-bar-fill {
+            background: linear-gradient(90deg, #e67e22, #d35400); 
+        }
+
+        /* --- Animation Keyframes --- */
+        @keyframes slideIn {
+            from { width: 0%; }
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .skill-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Professional Skills</h1>
+
+    <div class="container">
+
+        <div class="skill-card">
+            <h2>จิรัฐพงศ์ ภู่ประสิทธิ์ <span>Jiratpong Phuprasit</span></h2>
+            
+            <div class="skill-box">
+                <div class="skill-title">
+                    <span>Management (การจัดการ)</span>
+                    <span>90%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 90%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-title">
+                    <span>Problem Solving (การแก้ปัญหา)</span>
+                    <span>85%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-title">
+                    <span>Technology (เทคโนโลยี)</span>
+                    <span>75%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 75%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-card alt-color">
+            <h2>ธนากร กุมมารจันทร์ <span>Thanakorn Kummarajan</span></h2>
+
+            <div class="skill-box">
+                <div class="skill-title">
+                    <span>Creativity (ความคิดสร้างสรรค์)</span>
+                    <span>95%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 95%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-title">
+                    <span>Communication (การสื่อสาร)</span>
+                    <span>80%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 80%;"></div>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-title">
+                    <span>Teamwork (การทำงานเป็นทีม)</span>
+                    <span>85%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
